@@ -1,0 +1,186 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.yunusemrebakir.SurveillanceCamera.SettingsActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/streamLayout"
+        android:background="@drawable/border"
+        android:layout_marginBottom="20dp"
+>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStreamSettings"
+            android:text="Stream"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="#75ff121a"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStreamUrl"
+            android:text="Stream URL:"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editStreamUrl"
+            android:gravity="center"
+            android:layout_below="@+id/txtStreamUrl"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtStreamName"
+            android:text="Stream Name:"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editStreamName"
+            android:gravity="center"
+            android:layout_below="@+id/txtStreamUrl"
+            android:hint="(optional)"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/serviceLayout"
+        android:layout_below="@+id/streamLayout"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtServiceSettings"
+        android:text="Service"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#75ff121a"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtServiceSettings"
+        android:id="@+id/txtserviceStatus"
+        android:text="Service Status:"
+        android:textSize="15dp"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtIsserviceStatus"
+        android:text="not known"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/txtserviceStatus"
+        android:layout_toRightOf="@+id/txtserviceStatus"
+        android:layout_toEndOf="@+id/txtserviceStatus"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAutoStartService"
+        android:text="Autostart Service:"
+        android:textSize="15dp"
+        android:layout_below="@id/txtserviceStatus"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"/>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swAutoStartService"
+        android:layout_alignBottom="@+id/txtAutoStartService"
+        android:layout_alignLeft="@+id/txtIsserviceStatus"
+        android:layout_alignStart="@+id/txtIsserviceStatus" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnServiceStatus"
+        android:text="Kıll Servıce"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/txtAutoStartService"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationsLayout"
+        android:layout_below="@+id/serviceLayout"
+        android:background="@drawable/border">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNotificationSettings"
+        android:text="Notifications"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#75ff121a"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEnableNotifications"
+        android:text="Enable Notifications:"
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/txtNotificationSettings"/>
+
+
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swEnableNotifications"
+        android:layout_alignBottom="@+id/txtEnableNotifications"
+        android:layout_toRightOf="@+id/txtEnableNotifications"
+        android:layout_toEndOf="@+id/txtEnableNotifications"
+        />
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
